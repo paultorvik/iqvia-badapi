@@ -17,7 +17,7 @@ My Visual Studio 2017 solution to IQVIA's "Bad API" take-home problem consists o
 1. Clone this repo locally.
 2. Navigate to the root folder and double click the **.sln** file to open the project in Visual Studio 2017.
 3. Press **F5** to launch the Console app.
-4. Respond to the prompts for start date, end date and whether export the Tweet records to a CSV file or to the window.
+4. Respond to the prompts for start date, end date and whether to export the Tweets to a CSV file or to the window.
 5. If a CSV file path was entered, go and find the CSV file and review the contents.
 Otherwise, the tweets are output to the console window.
 
