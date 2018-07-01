@@ -12,7 +12,7 @@ My Visual Studio 2017 solution to IQVIA's "Bad API" take-home problem consists o
 - [IQVIA.BadApi.ConsoleApp](https://github.com/paultorvik/iqvia-badapi/tree/master/IQVIA.BadApi.ConsoleApp) - Console application that uses the API client to download a requested date range of tweets
 - [IQVIA.BadApi.Tests](https://github.com/paultorvik/iqvia-badapi/tree/master/IQVIA.BadApi.Tests) - Tests for the "bad API", focused on the 2-year range of known, available tweets
 
-## To Run the Code
+## To Run the App
 
 1. Clone this repo locally.
 2. Navigate to the root folder and double click the **.sln** file to open the project in Visual Studio 2017.
@@ -21,7 +21,7 @@ My Visual Studio 2017 solution to IQVIA's "Bad API" take-home problem consists o
 5. If a CSV file path was entered, go and find the CSV file and review the contents.
 Otherwise, the tweets are output to the console window.
 
-## TODO:
+## To Do
 - [ ] Docker
-- [ ] Consider other client like web site (ASP.NET Core MVC)
+- [ ] Consider adding other UI, e.g. ASP.NET Core MVC web site, that reuses the REST API client wrapper library
 - [ ] Possibly more error handling
