@@ -12,14 +12,14 @@ My Visual Studio 2017 solution to IQVIA's "Bad API" take-home problem consists o
 - [IQVIA.BadApi.ConsoleApp](https://github.com/paultorvik/iqvia-badapi/tree/master/IQVIA.BadApi.ConsoleApp) - Console application that uses the API client to download a requested date range of tweets
 - [IQVIA.BadApi.Tests](https://github.com/paultorvik/iqvia-badapi/tree/master/IQVIA.BadApi.Tests) - Tests for the "bad API", focused on the 2-year range of known, available tweets
 
-## To Run the App
+## How to Run Console App
 
 1. Clone this repo locally.
 2. Navigate to the root folder and double click the **.sln** file to open the project in Visual Studio 2017.
-3. Press **F5** to launch the Console app.
-4. Respond to the prompts for start date, end date and whether to export the Tweets to a CSV file or to the window.
-5. If a CSV file path was entered, go and find the CSV file and review the contents.
-Otherwise, the tweets are output to the console window.
+3. Set the IQVIA.BadApi.ConsoleApp as the StartUp project.
+4. Press **F5** to launch the Console app.
+5. Respond to the prompts for start date, end date and whether to export the Tweets to a CSV file or to the window.
+6. If a CSV file path was entered, go and find the CSV file and review the contents. Otherwise, the tweets are output to the console window.
 
 ## To Do
 - [ ] Add Docker file
