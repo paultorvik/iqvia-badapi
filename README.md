@@ -22,6 +22,6 @@ My Visual Studio 2017 solution to IQVIA's "Bad API" take-home problem consists o
 6. If a CSV file path was entered, go and find the CSV file and review the contents. Otherwise, the tweets are output to the console window.
 
 ## To Do
-- [ ] Add Docker file
+- [ ] Add Dockerfile
 - [ ] Possibly add another UI, e.g. ASP.NET Core MVC web site, that reuses the REST API client wrapper library
 - [ ] More error handling
