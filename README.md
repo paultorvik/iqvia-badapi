@@ -1,6 +1,6 @@
 # IQVIA "Bad API" Take-home Problem Solution
 
-The main console application prompts for start and end date-times (UTC) and also prompts for a file name where it can export the downloaded Tweets from [IQVIA's "bad" API](https://badapi.iqvia.io/swagger/). By default, the dates span 2016 to 2017.
+The main console application prompts for start and end date-times (UTC) and also prompts for a file name where it can export the downloaded Tweets from [IQVIA's "bad" API](https://badapi.iqvia.io/swagger/). By default, the dates span all of 2016 and 2017.
 
 ## Prerequisites
 - [Visual Studio 2017 Community edition or higher](https://www.visualstudio.com/downloads/)
