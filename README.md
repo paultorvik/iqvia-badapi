@@ -5,7 +5,7 @@ The main console application prompts for start and end date-times (UTC) and also
 ## Prerequisites
 - [Visual Studio 2017 Community edition or higher](https://www.visualstudio.com/downloads/)
 
-## Visual Studion Solution Structure
+## Solution Structure
 My Visual Studio 2017 solution to IQVIA's "Bad API" take-home problem consists of the following .NET Core 2.0 projects:
 
 - [IQVIA.BadApi.Client](https://github.com/paultorvik/iqvia-badapi/tree/master/IQVIA.BadApi.Client) - REST API client library for IQVIA's "bad API", which also accounts for lack of paging
