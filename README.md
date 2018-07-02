@@ -27,7 +27,7 @@ My Visual Studio 2017 solution to IQVIA's "Bad API" take-home problem consists o
 5. Respond to the prompts for start date, end date and whether to export the Tweets to a CSV file or to the console window.
 6. If a CSV file path was entered, go and find the CSV file and review the contents. Otherwise, the tweets are output to the console window.
 
-## To Do
+## Possible Enhancements
 - [ ] Add Dockerfile
-- [ ] Possibly add another UI, e.g. ASP.NET Core MVC web site, that reuses the REST API client wrapper library
+- [ ] Add another UI, e.g. ASP.NET Core MVC web site, that reuses the [IQVIA.BadApi.Client](IQVIA.BadApi.Client/) library
 - [ ] More error handling
