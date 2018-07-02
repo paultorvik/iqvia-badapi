@@ -2,7 +2,7 @@
 
 ## Overview
 
-My console application simply prompts for start and end date-times (UTC) and a file name where it can export downloaded Tweets from [IQVIA's "bad" API](https://badapi.iqvia.io/swagger/) in that date range. By default, the dates span all of 2016 and 2017.
+My console application simply prompts for start and end date-times (UTC) and a file name where it can export all Tweets from [IQVIA's "bad" API](https://badapi.iqvia.io/swagger/) in that date range. By default, the dates span all of 2016 and 2017.
 
 Because the tweets are returned from the API in ascending time stamp order, we can simply move the requested start date for each page to just after the highest time stamp in the last page we downloaded, in order to download the next page of Tweets. To get all Tweets, we do this until the next returned page has fewer Tweets in it than the page size (100), or none. That means there are no more Tweets, or a full page would have been returned. The same, original end date is used for all requests to always potentially encapsulate all remaining records.
 
