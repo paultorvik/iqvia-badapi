@@ -10,36 +10,28 @@ namespace IQVIA.BadApi.Client.Models
     [DataContract]
     public class Tweet
     {
-        private string _jsonStamp;
-        private DateTime _stamp = DateTime.MinValue;
-
         [DataMember(Name = "id")]
         public string ID { get; set; }
 
         [DataMember(Name = "stamp")]
-        private string JsonStamp
-        {
-            get { return _jsonStamp; }
-            set
-            {
-                _jsonStamp = value;
-                if (!DateTime.TryParse(value, CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal | DateTimeStyles.AdjustToUniversal, out _stamp))
-                    _stamp = DateTime.MinValue;
-            }
-        }
+        private string JsonStamp { get; set; }
 
         [IgnoreDataMember]
-        public DateTime Stamp
-        {
-            get { return _stamp; }
-            set
-            {
-                _stamp = value;
-                _jsonStamp = Stamp.ToString("o");
-            }
-        }
+        public DateTime Stamp { get; set; }
 
         [DataMember(Name = "text")]
         public string Text { get; set; }
+
+        [OnDeserialized]
+        void OnDeserialized(StreamingContext context)
+        {
+            Stamp = DateTime.Parse(JsonStamp, CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal | DateTimeStyles.AdjustToUniversal);
+        }
+
+        [OnSerializing]
+        void OnSerializing(StreamingContext context)
+        {
+            JsonStamp = Stamp.ToString("o");
+        }
     }
 }
