@@ -8,9 +8,6 @@ Because the tweets are returned from the API in ascending time stamp order, we c
 
 No duplicate Tweets are downloaded because the starting date for each requested page of Tweets is always just after whatever range of time stamps was returned for the previous page.
 
-## System Requirements
-- [Visual Studio 2017 or higher, any edition](https://www.visualstudio.com/downloads/)
-
 ## Solution Structure
 My Visual Studio 2017 solution to IQVIA's "Bad API" take-home problem consists of the following .NET Core 2.0 projects:
 
