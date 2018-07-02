@@ -38,7 +38,7 @@ namespace IQVIA.BadApi.ConsoleApp
                 endDate = endDate.AddDays(1).AddTicks(-1);
 
             // Get path of CSV file where tweets should be exported for review, verification
-            Console.Write("Enter CSV File Path to Export Tweets (default=display): ");
+            Console.Write("Enter CSV File Path to Export Tweets (none=view tweets): ");
             var csvFilePath = Console.ReadLine();
 
             Console.WriteLine();
@@ -64,11 +64,13 @@ namespace IQVIA.BadApi.ConsoleApp
                         csvWriter.Close();
                     }
                 }
+                stopWatch.Stop();
                 Console.WriteLine("Exported {0} tweets in {1} seconds", tweetCount, stopWatch.Elapsed.TotalSeconds);
             }
             else
             {
                 var tweets = apiClient.GetAllTweetsAsync(startDate, endDate).Result;
+                stopWatch.Stop();
                 Console.WriteLine("Downloaded {0} tweets in {1} seconds", tweets.Count, stopWatch.Elapsed.TotalSeconds);
                 Console.WriteLine();
                 Console.WriteLine("Press a key to see next tweet. Esc to stop pausing between tweets.");
@@ -89,7 +91,6 @@ namespace IQVIA.BadApi.ConsoleApp
                     }
                 }
             }
-            stopWatch.Stop();
 
             // Terminate after key press
             Console.ReadKey(true);
