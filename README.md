@@ -21,7 +21,7 @@ My Visual Studio 2017 solution to IQVIA's "Bad API" take-home problem consists o
 ## How to Run App
 
 1. Clone this repo locally.
-2. Navigate to the root folder and double click the **.sln** file to open the project in Visual Studio 2017.
+2. Navigate to the root folder and double click the **.sln** file to open the solution in Visual Studio.
 3. Set **IQVIA.BadApi.ConsoleApp** as the StartUp project.
 4. Press **F5** to launch the Console app.
 5. Respond to the prompts for start date, end date and whether to export the Tweets to a CSV file or to the console window.
