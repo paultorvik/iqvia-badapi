@@ -6,7 +6,7 @@ My console application simply prompts for start and end date-times (UTC) and a f
 
 Because the tweets are returned from the API in ascending time stamp order, we can simply move the requested start date for each page to just after the highest time stamp in the last page we downloaded, in order to download the next page of Tweets. To get all Tweets, we do this until the next returned page has fewer Tweets in it than the page size (100), or none. That means there are no more Tweets, or a full page would have been returned. The same, original end date is used for all requests to enable us to always fully encapsulate the remaining records with each request.
 
-No duplicate Tweets are downloaded because a completely distinct range of time stamps is requested each time.
+No duplicate Tweets are downloaded because the starting date for each requested page of Tweets is always just after whatever range of time stamps was returned for the previous page.
 
 ## System Requirements
 - [Visual Studio 2017 or higher, any edition](https://www.visualstudio.com/downloads/)
