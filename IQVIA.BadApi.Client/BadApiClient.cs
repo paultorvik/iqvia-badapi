@@ -79,8 +79,11 @@ namespace IQVIA.BadApi.Client
             do
             {
                 nextTweets = await GetTweetsAsync(nextStartDate, endDate);
-                allTweets.AddRange(nextTweets);
-                nextStartDate = nextTweets[nextTweets.Count - 1].Stamp.AddTicks(1);
+                if (nextTweets.Count > 0)
+                {
+                    allTweets.AddRange(nextTweets);
+                    nextStartDate = nextTweets[nextTweets.Count - 1].Stamp.AddTicks(1);
+                }
             }
             while (nextTweets.Count >= TweetPageSize);
             return allTweets;
@@ -101,9 +104,12 @@ namespace IQVIA.BadApi.Client
             do
             {
                 nextTweets = GetTweetsAsync(nextStartDate, endDate).Result;
-                foreach (var tweet in nextTweets)
-                    yield return tweet;
-                nextStartDate = nextTweets[nextTweets.Count - 1].Stamp.AddTicks(1);
+                if (nextTweets.Count > 0)
+                {
+                    foreach (var tweet in nextTweets)
+                        yield return tweet;
+                    nextStartDate = nextTweets[nextTweets.Count - 1].Stamp.AddTicks(1);
+                }
             }
             while (nextTweets.Count >= TweetPageSize);
         }
