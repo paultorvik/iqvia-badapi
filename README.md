@@ -12,8 +12,8 @@ No duplicate Tweets are downloaded because the starting date for each requested 
 My Visual Studio 2017 solution to IQVIA's "Bad API" take-home problem consists of the following .NET Core 2.0 projects:
 
 - [IQVIA.BadApi.Client](IQVIA.BadApi.Client/) - REST API client library for IQVIA's "bad API", which also accounts for lack of paging
-- [IQVIA.BadApi.ConsoleApp](IQVIA.BadApi.ConsoleApp/) - Console application that uses IQVIA.BadApi.Client to download a requested date range of tweets
-- [IQVIA.BadApi.Tests](IQVIA.BadApi.Tests/) - Tests for "bad API" using IQVIA.BadApi.Client to download 2-year range of known, available tweets
+- [IQVIA.BadApi.ConsoleApp](IQVIA.BadApi.ConsoleApp/) - Console application that uses **IQVIA.BadApi.Client** to download a requested date range of tweets
+- [IQVIA.BadApi.Tests](IQVIA.BadApi.Tests/) - Tests for "bad API" using **IQVIA.BadApi.Client** to download 2-year range of known, available tweets
 
 ## How to Run App
 
@@ -26,5 +26,5 @@ My Visual Studio 2017 solution to IQVIA's "Bad API" take-home problem consists o
 
 ## Possible Enhancements
 - [ ] Add Dockerfile
-- [ ] Add another UI, e.g. ASP.NET Core MVC web site, that reuses the [IQVIA.BadApi.Client](IQVIA.BadApi.Client/) library
+- [ ] Add another UI, e.g. ASP.NET Core MVC web site, that reuses the **IQVIA.BadApi.Client** library
 - [ ] More error handling
